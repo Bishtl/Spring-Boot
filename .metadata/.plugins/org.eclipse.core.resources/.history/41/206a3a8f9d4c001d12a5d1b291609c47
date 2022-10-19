@@ -1,0 +1,18 @@
+package com.example.demo;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class reqController {
+
+	@GetMapping("/Add three number")
+	public int getResult(@RequestParam(name = "a") int a ,
+			@RequestParam(name = "b")int b, 
+			@RequestParam(name = "c") int c) {
+		int sum = a+b+c;
+		return sum;
+		
+	}
+}
